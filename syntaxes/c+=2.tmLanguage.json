@@ -1,0 +1,397 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "c+=2",
+	"patterns": [
+		{"include": "#keywords"},
+        {"include": "#namespace"},
+        {"include": "#keywords_dec"},
+        {"include": "#keywords_extends"},
+		{"include": "#strings"},
+        {"include": "#strings_grave"},
+        {"include": "#attributes"},
+        {"include": "#desc_directives"},
+        {"include": "#directives"},
+        {"include": "#ABIs"},
+        {"include": "#SYMBOL"},
+        {"include": "#lspec"},
+        {"include": "#comments"},
+        {"include": "#doc_comment"},
+        {"include": "#block_comment"},
+        {"include": "#access"},
+        {"include": "#litop"},
+        {"include": "#this"},
+        {"include": "#punct"},
+        {"include": "#operators"},
+        {"include": "#primitivetypes"}
+	],
+	"repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.c+=2",
+                    "begin": "//",
+                    "end": "$"
+                }
+            ]
+        },
+        "doc_comment": {
+            "name": "comment.block.documentation.c+=2",
+            "begin": "/\\*\\*",
+            "end": "\\*/",
+            "patterns": [
+            ]
+        },
+        "block_comment": {
+            "name": "comment.block.c+=2",
+            "begin": "/\\*",
+            "end": "\\*/",
+            "patterns": [
+                {
+                    "include": "#block_comment"
+                }
+            ]
+        },
+        "access": {
+			"patterns": [{
+				"name": "entity.name.type.c+=2.access",
+				"match": "\\b(public|protected|private)\\b"
+			}]
+		},
+        "primitivetypes": {
+			"patterns": [{
+				"name": "entity.name.type.c+=2.primitive",
+				"match": "\\b(primitive64|primitive32|primitive16|primitive8|primitive0|primitiveFloat32|primitiveFloat64)\\b"
+			}]
+		},
+        "namespace": {
+			"patterns": [{
+				"name": "entity.name.type.c+=2.namespace",
+				"match": "\\b(namespace)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.c+=2",
+				"match": "\\b(if|while|for|return|else|break|switch|continue|case|default|try|catch|throw)\\b"
+			}]
+		},
+        "keywords_extends": {
+			"patterns": [{
+				"name": "keyword.control.c+=2.extends",
+				"match": "\\b(extends)\\b"
+			}]
+		},
+        "keywords_dec": {
+            "patterns": [
+                {
+                    "name": "keyword.other.c+=2.class",
+                    "match": "\\b(class)\\b"
+                },
+                {
+                    "name": "keyword.other.c+=2.typecast",
+                    "match": "\\b(typecast)\\b"
+                }
+            ]
+        },
+        "this": {
+            "patterns": [{
+                "name": "variable.language.this.c+=2",
+                "match": "\\b(this)\\b"
+            }]
+        },
+        "litop": {
+            "patterns": [
+                {
+                    "name": "keyword.other.c+=2.litop",
+                    "match": "\\b(litop)\\b"
+                },
+                {
+                    "name": "keyword.control.c+=2.litop",
+                    "match": "\\b(add|sub|mul|div|mod|cast)\\b"
+                }
+            ]
+        },
+        "ABIs": {
+            "patterns": [{
+                "name": "keyword.control.c+=2.ABI",
+                "match": "ABI-[^\\s]*"
+            }]
+        },
+        "SYMBOL": {
+            "patterns": [{
+                "name": "keyword.control.c+=2.ABI",
+                "match": "SYMBOL-[^\\s]*"
+            }]
+        },
+        "desc_directives": {
+            "patterns": [
+                {
+                    "name": "keyword.other.c+=2.desc",
+                    "begin": "@desc",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "comment.c+=2",
+                            "begin": " ",
+                            "end": "$"
+                        }
+                    ]
+                },
+                {
+                    "name": "keyword.control.c+=2.dreturn",
+                    "begin": "@return",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "comment.c+=2",
+                            "begin": " ",
+                            "end": "$"
+                        }
+                    ]
+                },
+                {
+                    "name": "variable.parameter.c+=2.dtparam",
+                    "begin": "@param",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "comment.c+=2",
+                            "begin": " ",
+                            "end": "$"
+                        }
+                    ]
+                },
+                {
+                    "name": "variable.parameter.c+=2.dtparam",
+                    "begin": "@tparam",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "comment.c+=2",
+                            "begin": " ",
+                            "end": "$"
+                        }
+                    ]
+                }
+            ] 
+        },
+        "directives": {
+            "patterns": [
+                {
+                    "name": "keyword.control.c+=2.directive.inc",
+                    "begin": "#include",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "string.c+=2",
+                            "begin": "<|\"",
+                            "end": ">|\""
+                        }
+                    ]
+                },
+                {
+                    "name": "keyword.control.c+=2.directive.pragma",
+                    "begin": "#pragma",
+                    "end": "$",
+                    "patterns": [
+                        {
+                            "name": "entity.name.function.c+=2.pragma.1.pp",
+                            "begin": "push|pop",
+                            "end": "$"
+                        },
+                        {
+                            "name": "entity.name.function.c+=2.pragma.1.cpl",
+                            "begin": "cpl",
+                            "end": "$",
+                            "patterns": [
+                                {
+                                    "name": "constant.numeric.c+=2.pragma.cpl",
+                                    "begin": "\\d",
+                                    "end": "$"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "entity.name.function.c+=2",
+                            "begin": "warning",
+                            "end": "$",
+                            "patterns": [
+                                {
+                                    "name": "entity.name.function.c+=2",
+                                    "begin": "disable",
+                                    "end": "$",
+                                    "patterns": [
+                                        {
+                                            "name": "variable.name.c+=2",
+                                            "begin": ".*",
+                                            "end": "$"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ] 
+        },
+        "attributes": {
+            "patterns": [
+                {
+                    "name": "keyword.control.c+=2.mangler",
+                    "match": "mangling-[^\\s]*"
+                },
+                {"include": "#misc_attributes"},
+                {"include": "#primitive_attributes"}
+            ]
+        },
+        "lspec": {
+            "patterns": [
+                {"include":"#lRegSpec"}
+            ]
+        },
+        "lRegSpec": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.c+=2.regspec",
+                    "match": "(?<=\\()(([r|e]?[a-d]x)|([r|e]?[s|b|i]p)|(EFER)|([c|d]?r[0-9][0-5]?))(?=\\))"
+                }
+            ]
+        },
+        "misc_attributes": {
+            "patterns": [
+                {"include":"#misc_attributes_alloc"},
+                {"include":"#misc_attributes_access"},
+                {"include":"#misc_attributes_impl"},
+                {"include":"#misc_attributes_doc"}
+            ]
+        },
+        "misc_attributes_alloc": {
+            "patterns": [{
+				"name": "keyword.control.c+=2.attr.alloc",
+				"match": "\\b(static|extern|noalloc)\\b"
+			}]
+        },
+        "misc_attributes_access": {
+            "patterns": [{
+				"name": "keyword.control.c+=2.attr.access",
+				"match": "\\b(volatile|constexpr|const)\\b"
+			}]
+        },
+        "misc_attributes_impl": {
+            "patterns": [{
+				"name": "keyword.control.c+=2.attr.impl",
+				"match": "\\b(inline|noop)\\b"
+			}]
+        },
+        "misc_attributes_doc": {
+            "patterns": [{
+				"name": "keyword.control.c+=2.attr.doc",
+				"match": "\\b(deprecated|export|nodoc)\\b"
+			}]
+        },
+        "primitive_attributes": {
+            "patterns": [{
+				"name": "keyword.control.c+=2.primitive",
+				"match": "\\b(primitiveInPlace|primitiveFloat|primitiveAdd|primitiveSub|primitiveMul|primitiveDiv|primitiveMod|primitiveEqual|primitiveNotEqual|primitiveGreater|primitiveGreaterEqual|primitiveLess|primitiveLessEqual|primitiveAnd|primitiveXor|primitiveOr|primitiveNot|primitiveInc|primitiveDec|primitiveAssign)\\b"
+			}]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.c+=2.base.16",
+                    "match": "(?<![a-zA-Z0-9]+)0x[0-9a-fA-F]+[g-zG-Z]?[a-zA-Z0-9]+"
+                },
+                {
+                    "name": "constant.numeric.c+=2.base.2",
+                    "match": "(?<![a-zA-Z0-9]+)0b[0-1]+[a-zA-Z]?[a-zA-Z0-9]+"
+                },
+                {
+                    "name": "constant.numeric.c+=2.base.10",
+                    "match": "(?<![a-zA-Z0-9]+)0d[0-9]+[a-zA-Z]?[a-zA-Z0-9]+"
+                },
+                {
+                    "name": "constant.numeric.c+=2.base.8",
+                    "match": "(?<![a-zA-Z0-9]+)0o[0-7]+[a-zA-Z]?[a-zA-Z0-9]+"
+                },
+                {
+                    "name": "constant.numeric.c+=2.base.4",
+                    "match": "(?<![a-zA-Z0-9]+)0q[0-3]+[a-zA-Z]?[a-zA-Z0-9]+"
+                },
+                {
+                    "name": "constant.numeric.c+=2.base.default",
+                    "match": "(?<![a-zA-Z0-9]+)[0-9]+[a-zA-Z]?[a-zA-Z0-9]+"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.new.c+=2",
+                    "match": "([\\+\\-\\=\\&\\|\\/\\%\\*\\<]+)|((?<!-)>)"
+                }
+            ]
+        },
+        "punct": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.c+=2",
+                    "match": "(\\.|\\;|\\:|(->)|\\,)"
+                }
+            ]
+        },
+		"strings": {
+			"name": "string.quoted.double.c+=2",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.c+=2",
+					"match": "\\\\[a-zA-Z]"
+				},
+                {
+					"name": "constant.character.escape.c+=2.number.hex",
+					"match": "\\\\[0-9a-fA-F][0-9a-fA-F]"
+				}
+			]
+		},
+        "strings_grave": {
+			"name": "string.quoted.other.c+=2.grave",
+			"begin": "`",
+			"end": "`",
+			"patterns": [
+				{
+					"name": "constant.character.escape.c+=2",
+					"match": "\\\\[a-zA-Z]"
+				},
+                {
+					"name": "constant.character.escape.c+=2.number.hex",
+					"match": "\\\\[0-9a-fA-F][0-9a-fA-F]"
+				},
+				{
+					"name": "comment.c+=2.grave.var.begin",
+					"match": "\\$\\{"
+				},
+				{
+					"name": "comment.c+=2.grave.var.end",
+					"match": "(?<=\\$\\{.*)\\}"
+				},
+                {
+					"name": "comment.c+=2.grave.var.content",
+					"begin": "(?<=\\$\\{).",
+					"end": "(?<=\\$\\{.*)\\}",
+					"patterns": [
+						{"include": "#litop"},
+						{"include": "#this"},
+						{"include": "#punct"},
+						{"include": "#operators"},
+						{"include": "#keywords_dec"},
+						{"include": "#strings"},
+						{"include": "#strings_grave"},
+						{"include": "#attributes"}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.cp2"
+}

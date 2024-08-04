@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "out",
+        "sourceMap": true,
+        "rootDir": "src",
+        "strict": true,
+        "lib": ["ES2023"]
+    },
+}

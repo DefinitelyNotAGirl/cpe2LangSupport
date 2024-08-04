@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="350.37311mm"
+   height="299.98364mm"
+   viewBox="0 0 350.37311 299.98364"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="alticon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="0.38254353"
+     inkscape:cx="709.72315"
+     inkscape:cy="586.86132"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer5">
+    <sodipodi:guide
+       position="0,500"
+       orientation="0,1889.7638"
+       id="guide59"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="500,500"
+       orientation="1889.7638,0"
+       id="guide61"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="500,0"
+       orientation="0,-1889.7638"
+       id="guide63"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="0,0"
+       orientation="-1889.7638,0"
+       id="guide65"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="250,250"
+       orientation="-1,0"
+       id="guide122"
+       inkscape:locked="true"
+       inkscape:label="V-Center"
+       inkscape:color="rgb(237,51,59)" />
+    <sodipodi:guide
+       position="250,250"
+       orientation="0,1"
+       id="guide124"
+       inkscape:locked="true"
+       inkscape:label="H-Center"
+       inkscape:color="rgb(237,51,59)" />
+    <sodipodi:guide
+       position="395,250"
+       orientation="-1,0"
+       id="guide1870"
+       inkscape:locked="true"
+       inkscape:label=""
+       inkscape:color="rgb(145,65,172)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="text"
+     transform="translate(-99.999999,-100.00833)">
+    <g
+       inkscape:groupmode="layer"
+       id="layer3"
+       inkscape:label="C"
+       style="display:inline">
+      <path
+         style="opacity:1;fill:none;fill-opacity:0.5;stroke:#00e25f;stroke-width:50;stroke-dasharray:none;stroke-opacity:1"
+         id="path13728"
+         d="M 358.22609,312.54688 A 125,125 0 0 1 217.69791,370.75419 125,125 0 0 1 125.0001,250.15827 125,125 0 0 1 217.39222,129.328 125,125 0 0 1 358.06735,187.17925"
+         sodipodi:type="arc"
+         sodipodi:arc-type="arc"
+         sodipodi:start="0.52403191"
+         sodipodi:end="5.756621"
+         sodipodi:ry="125"
+         sodipodi:rx="125"
+         sodipodi:cy="250"
+         sodipodi:cx="250"
+         sodipodi:open="true"
+         inkscape:label="Text-C" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer2"
+       inkscape:label="Plus"
+       transform="translate(-49.869151)"
+       style="display:inline">
+      <rect
+         style="display:inline;fill:none;fill-opacity:0.5;stroke:#00e25f;stroke-width:49.9999;stroke-dasharray:none;stroke-opacity:1"
+         id="use14802"
+         width="9.7468481"
+         height="2.8421709e-14"
+         x="-254.87341"
+         y="368.75262"
+         inkscape:label="Plus-H"
+         transform="rotate(-90)" />
+      <rect
+         style="display:inline;opacity:1;fill:none;fill-opacity:0.5;stroke:#00e25f;stroke-width:49.9999;stroke-dasharray:none;stroke-opacity:1"
+         id="rect14768"
+         width="9.7468481"
+         height="2.8421709e-14"
+         x="363.87918"
+         y="250"
+         inkscape:label="Plus-V" />
+    </g>
+    <g
+       id="layer4"
+       inkscape:label="Equals"
+       style="display:inline"
+       transform="translate(-40.128627)"
+       inkscape:groupmode="layer">
+      <rect
+         style="display:inline;fill:none;fill-opacity:0.5;stroke:#00e25f;stroke-width:49.9999;stroke-dasharray:none;stroke-opacity:1"
+         id="use14802-5"
+         width="9.7468481"
+         height="2.8421709e-14"
+         x="-245.12657"
+         y="419.99994"
+         inkscape:label="EqualsTop"
+         transform="rotate(-90)" />
+      <rect
+         style="display:inline;fill:none;fill-opacity:0.5;stroke:#00e25f;stroke-width:49.9999;stroke-dasharray:none;stroke-opacity:1"
+         id="use14802-5-3"
+         width="9.7468481"
+         height="2.8421709e-14"
+         x="-264.62027"
+         y="419.99994"
+         inkscape:label="EqualsTop"
+         transform="rotate(-90)" />
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="Two">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:1;fill:#00e25f;fill-opacity:1;stroke:#00e25f;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="411.91418"
+         y="276.10556"
+         id="text14990"><tspan
+           sodipodi:role="line"
+           id="tspan14988"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70.5556px;font-family:'JetBrains Mono';-inkscape-font-specification:'JetBrains Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#00e25f;fill-opacity:1;stroke-width:1;stroke-dasharray:none;stroke:#00e25f;stroke-opacity:1"
+           x="411.91418"
+           y="276.10556">2</tspan></text>
+    </g>
+  </g>
+</svg>

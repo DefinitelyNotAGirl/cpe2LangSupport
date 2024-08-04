@@ -1,0 +1,46 @@
+{
+    "dependencies": {
+        "vscode-languageserver": "^7.0.0",
+        "vscode-languageserver-textdocument": "^1.0.1",
+        "vscode-uri": "^3.0.8"
+    },
+    "contributes": {
+        "semanticTokenTypes": [
+            {
+                "id": "cp2_num_hexadecimal",
+                "superType": "number",
+                "description": "base 16 numbers"
+            },
+            {
+                "id": "cp2_num_decimal",
+                "superType": "number",
+                "description": "base 10 numbers"
+            },
+            {
+                "id": "cp2_num_octal",
+                "superType": "number",
+                "description": "base 8 numbers"
+            },
+            {
+                "id": "cp2_num_quaternary",
+                "superType": "number",
+                "description": "base 4 numbers"
+            },
+            {
+                "id": "cp2_num_binary",
+                "superType": "number",
+                "description": "base 2 numbers"
+            }
+        ],
+        "semanticTokenModifiers": [
+            {"id": "cp2_hexadecimal","description": "base 16 numbers"},
+            {"id": "cp2_decimal","description": "base 10 numbers"},
+            {"id": "cp2_octal","description": "base 8 numbers"},
+            {"id": "cp2_binary","description": "base 2 numbers"},
+            {"id": "cp2_quaternary","description": "base 4 numbers"}
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -p ./"
+    }
+}

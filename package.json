@@ -1,0 +1,131 @@
+{
+    "name": "cpe2langsupport",
+    "displayName": "C+=2",
+    "description": "support for the c+=2 language",
+    "version": "0.0.1",
+    "icon": "./icons/vscode.png",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "semanticTokenTypes": [
+            {
+                "id": "cp2_num_hexadecimal",
+                "superType": "number",
+                "description": "base 16 numbers"
+            },
+            {
+                "id": "cp2_num_decimal",
+                "superType": "number",
+                "description": "base 10 numbers"
+            },
+            {
+                "id": "cp2_num_octal",
+                "superType": "number",
+                "description": "base 8 numbers"
+            },
+            {
+                "id": "cp2_num_quaternary",
+                "superType": "number",
+                "description": "base 4 numbers"
+            },
+            {
+                "id": "cp2_num_binary",
+                "superType": "number",
+                "description": "base 2 numbers"
+            }
+        ],
+        "semanticTokenModifiers": [
+            {"id": "cp2_hexadecimal","description": "base 16 numbers"},
+            {"id": "cp2_decimal","description": "base 10 numbers"},
+            {"id": "cp2_octal","description": "base 8 numbers"},
+            {"id": "cp2_binary","description": "base 2 numbers"},
+            {"id": "cp2_quaternary","description": "base 4 numbers"}
+        ],
+        "languages": [
+            {
+                "id": "c+=2",
+                "aliases": [
+                    "C+=2",
+                    "c+=2"
+                ],
+                "extensions": [
+                    ".cp2",
+                    ".c2",
+                    ".hp2",
+                    ".h2"
+                ],
+                "icon": {
+                    "light": "./icons/logo_jbstyle.png",
+                    "dark": "./icons/logo_jbstyle.png"
+                },
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "c+=2.setup_c2_proj",
+                "title": "c+=2: setup new project in current directory"
+            },
+            {
+                "command": "c+=2.c2_proj_gen_makefile",
+                "title": "c+=2: generate makefile for current project"
+            },
+            {
+                "command": "c+=2.c2_proj_gen_dir_struct",
+                "title": "c+=2: generate directory structure for current project"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "c+=2",
+            "properties": {
+                "c+=2.compilerCommand": {
+                    "title": "compiler command",
+                    "type": "string",
+                    "default": "cp2",
+                    "description": "the command that should be used to invoke the compiler on the shell (not including compiler options)"
+                },
+                "c+=2.userspace": {
+                    "title": "use userspace language/STL features",
+                    "type": "boolean",
+                    "default": "true",
+                    "description": "if 'userspace' doesnt tell you anything, just leave this as default (true)"
+                },
+                "c+=2.compilerArgs": {
+                    "title": "c+=2 compiler arguments",
+                    "type": "array",
+                    "description": "arguments passed to the compiler, this needs to include any -I arguments passed to the compiler when building your applicaton/library"
+                }
+            }
+        },
+        "grammars": [
+            {
+                "language": "c+=2",
+                "scopeName": "source.cp2",
+                "path": "./syntaxes/c+=2.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -p ./"
+    },
+    "dependencies": {
+        "@types/vscode": "^1.84.1",
+        "@vscode/test-electron": "^2.3.6",
+        "monaco": "^1.201704190613.0",
+        "vscode-languageclient": "^7.0.0",
+        "vscode-languageserver": "^9.0.1",
+        "vscode-languageserver-textdocument": "^1.0.11",
+        "vscode-test": "^1.6.1",
+        "vscode-uri": "^3.0.8"
+    },
+    "devDependencies": {
+        "@types/node": "^20.9.0",
+        "vscode": "^1.1.34"
+    }
+}
